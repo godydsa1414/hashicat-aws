@@ -129,6 +129,7 @@ resource "aws_instance" "hashicat" {
   key_name                    = aws_key_pair.hashicat.key_name
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.hashicat.id
+  department                  = "devops"
   vpc_security_group_ids      = [aws_security_group.hashicat.id]
 
   tags = {
